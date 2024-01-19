@@ -18,7 +18,7 @@ for object in selection_names:
     main_obj.select_set(True)
     bpy.ops.object.editmode_toggle()
     bpy.ops.mesh.select_all(action='SELECT')
-    bpy.ops.mesh.remove_doubles()
+    bpy.ops.mesh.remove_doubles(use_sharp_edge_from_normals=True)
 
     bpy.ops.object.editmode_toggle()
     bpy.ops.object.modifier_add(type='DATA_TRANSFER')
